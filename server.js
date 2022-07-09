@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
   res.send("Chat Server is Working!");
 });
 
-const uri = process.env["ATLAS_URI"];
+const uri = process.env.ATLAS_URI;
 mongoose.connect(uri);
 
 io.on("connection", (socket) => {
